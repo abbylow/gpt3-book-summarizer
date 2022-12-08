@@ -32,7 +32,7 @@ body {
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 40px;
 }
 
 .header {    
@@ -93,7 +93,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 150px;
+    height: 120px;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -127,7 +127,7 @@ textarea {
     display: flex;
     place-content: center;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex: 0 0 auto;
     flex-flow: row nowrap;
     gap: 12px;
@@ -311,9 +311,11 @@ textarea {
 }
 
 .output-content {
+    font-size: 20px;
+    line-height: 32px;
     outline: none;
     display: flex;
-    /* max-width: 25%; */
+    max-width: 80%;
     flex-direction: column;
     justify-content: flex-start;
     flex-shrink: 0;
@@ -321,7 +323,7 @@ textarea {
 }
 
 .output-content p {
-    text-align: center;
+    text-align: left;
     white-space: pre-line;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -338,7 +340,7 @@ textarea {
     }
 
     .prompt-box {
-        width: 100%;
+        width: 80%;
     }
 }
 
