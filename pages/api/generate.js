@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `Take the book title below, generate a table of contents.
 
-Title`;
+Title: `;
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -24,7 +24,7 @@ const generateAction = async (req, res) => {
 
   const secondPrompt = 
   `
-  Write me a script to introduce the book using the table of contents above. Make the tone friendly and don't show the table of contents in script. Go in depth and elaborate each of the points. Also give an example for each of the points if the book is non-fiction. The script should be more than 500 words.
+  Write me a script to summarize the book using the table of contents above. Make the tone friendly and don't show the table of contents in script. Go in depth and elaborate each of the points. Also give an example for each of the points if the book is non-fiction. The script should be more than 500 words.
 
   Title: ${req.body.userInput}
 
